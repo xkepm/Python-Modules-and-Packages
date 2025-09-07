@@ -1,8 +1,6 @@
+# 📝 Task – Python Modules and Packages
 
-# 📝 Task: Python Modules and Packages
-
-
-## 📂 Required Project Structure
+# 📂 Project Structure
 ```
 my_project/
 │
@@ -10,34 +8,40 @@ my_project/
 │
 └── mypackage/
     ├── __init__.py
-    ├── math_utils.py
-    └── greetings.py
+    ├── calc_utils.py
+    └── weather_utils.py
 ```
+
+---
 
 ## 📄 Instructions
 
-1. Inside `math_utils.py`, create two functions:
-   - `add(a, b)` → returns the sum of two numbers.
-   - `multiply(a, b)` → returns the product of two numbers.
+1. **Inside `calc_utils.py`**
+   - Create a function `square(n)` → returns the square of a number.  
+   - Create a function `cube(n)` → returns the cube of a number.  
 
-2. Inside `greetings.py`, create two functions:
-   - `hello(name)` → prints a welcome message.
-   - `goodbye(name)` → prints a goodbye message.
+2. **Inside `weather_utils.py`**
+   - Create a function `today_weather(city)` → prints today’s weather message for the city.  
+   - Create a function `forecast(city)` → prints the weather forecast for the next days.  
 
-3. In `main.py`, import your modules from the package and test:
-   - Adding and multiplying numbers.
-   - Printing hello and goodbye messages for a name of your choice.
+3. **Inside `main.py`**
+   - Import your modules from the package.  
+   - Call the functions to:  
+     - Calculate the square and cube of a number.  
+     - Print the weather and forecast for a city of your choice.  
 
-4. Run your program using:
+4. **Run your program**
    ```bash
    python main.py
    ```
 
+---
+
 ## 🎯 Expected Outcome
-When you run `main.py`, you should see results similar to:
+When you run the program, you should see results like:
 ```
-5
-24
-Hello, Ahmed!
-Goodbye, Ahmed!
+25
+27
+The weather in Riyadh is sunny with mild temperature.
+The forecast for Riyadh is rainy for the next two days.
 ```
