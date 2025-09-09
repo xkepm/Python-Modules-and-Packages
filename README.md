@@ -1,47 +1,61 @@
-# 📝 Task – Python Modules and Packages
+# LAB_MODULES_PACKAGES
 
-# 📂 Project Structure
-```
-my_project/
-│
-├── main.py
-│
-└── mypackage/
-    ├── __init__.py
-    ├── calc_utils.py
-    └── weather_utils.py
-```
+## Restaurant
 
----
+In this exercise, you'll create a Python package named `restaurant` that
+contains a module named `chef`. The `chef` module includes functions for
+managing dishes in a restaurant system without using classes.
 
-## 📄 Instructions
+In this exercise, you'll create a Python package named restaurant that contains a module named chef. The chef module should include functions for managing dishes in a restaurant system without using classes.
 
-1. **Inside `calc_utils.py`**
-   - Create a function `square(n)` → returns the square of a number.  
-   - Create a function `cube(n)` → returns the cube of a number.  
+Follow these steps to complete the exercise:
 
-2. **Inside `weather_utils.py`**
-   - Create a function `today_weather(city)` → prints today’s weather message for the city.  
-   - Create a function `forecast(city)` → prints the weather forecast for the next days.  
+1- Create a folder named restaurant in your working directory.
 
-3. **Inside `main.py`**
-   - Import your modules from the package.  
-   - Call the functions to:  
-     - Calculate the square and cube of a number.  
-     - Print the weather and forecast for a city of your choice.  
+2- Inside the restaurant folder, create a file named __init__.py. This file is required for Python to treat the directory as a package.
 
-4. **Run your program**
-   ```bash
-   python main.py
-   ```
+3- Create a new file named chef.py inside the restaurant folder. In this file, define the following functions:
 
----
+- add_dish(menu, name, price) – takes a dictionary (menu), a dish name (string), and a price (float or int) as input, and adds a new dish to the menu as a dictionary with the keys 'name', 'price', and 'available'. The 'available' key should have a boolean value, initially set to True. If the dish already exists in the menu, print an appropriate message.
 
-## 🎯 Expected Outcome
-When you run the program, you should see results like:
-```
-25
-27
-The weather in Riyadh is sunny with mild temperature.
-The forecast for Riyadh is rainy for the next two days.
-```
+- remove_dish(menu, name) – takes a dictionary (menu) and a dish name (string) as input, and removes the dish from the menu. If the dish does not exist in the menu, print an appropriate message.
+
+- update_price(menu, name, new_price) – takes a dictionary (menu), a dish name (string), and a new price (float or int), and updates the price of the dish. If the dish does not exist, print an appropriate message.
+
+- place_order(menu, name) – takes a dictionary (menu) and a dish name (string) as input, and sets the 'available' key of the dish to False to indicate it’s being prepared. If the dish does not exist or is not available, print an appropriate message.
+
+- display_menu(menu) – takes a dictionary (menu) as input and prints all the dishes in the menu in a formatted way.
+
+4 - Write a script named main.py in your working directory (outside the restaurant folder) that imports and uses the chef module from the restaurant package to manage a simple restaurant menu.
+
+5- Use the functions from chef to add dishes, remove a dish, update a price, place an order, and display the menu.
+
+
+### File Tree
+
+    .
+    ├── README.md            
+    ├── main.py
+    └── restaurant/
+        ├── __init__.py
+        └── chef.py
+
+------------------------------------------------------------------------
+
+## Sample Output
+
+When you run `python main.py`, you should see:
+
+    Pizza - $12.99 - Available
+    Pasta - $9.99 - Available
+    Salad - $6.99 - Available
+
+    Pizza - $12.99 - Ordered
+    Pasta - $9.99 - Available
+    Salad - $6.99 - Available
+
+    Pizza - $13.99 - Available
+    Pasta - $9.99 - Available
+    Salad - $6.99 - Available
+
+------------------------------------------------------------------------
